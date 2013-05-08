@@ -2,9 +2,9 @@ SchoolReport::Application.routes.draw do
   resources :users  
   resources :sessions, only: [:new, :create, :destroy]
   resources :topics, only: [:create, :destroy, :new, :index, :show]
+  resources :replies
   
   #Topics
-  #match '/topic', to: 'topics#show'
   
   #Users
   match '/registration', to: 'users#new'

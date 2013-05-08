@@ -20,7 +20,12 @@ namespace :db do
       content = Faker::Lorem.sentence(5)
       title = Faker::Lorem.words(1)
       users.each { |user| user.topics.create!(content: content, title: title) }    
-    end 
+    end
+    topics = Topic.all(limit: 6)
+    50.times do
+      content = Faker::Lorem.sentence(5)
+      topics.each { |topic| topic.replies.create!(content: content) }    
+    end
   end
 end
 

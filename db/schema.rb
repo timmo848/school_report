@@ -13,18 +13,9 @@
 
 ActiveRecord::Schema.define(:version => 20130508034645) do
 
-  create_table "relationships", :force => true do |t|
-    t.integer  "replyee_id"
-    t.integer  "replyer_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "relationships", ["replyee_id"], :name => "index_relationships_on_replyee_id"
-  add_index "relationships", ["replyer_id"], :name => "index_relationships_on_replyer_id"
-
   create_table "replies", :force => true do |t|
     t.text     "content"
+    t.integer  "topic_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
