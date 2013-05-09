@@ -1,31 +1,36 @@
 namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
-    admin = User.create!(name: "Example User",
-                 email: "example@railstutorial.org",
-                 password: "foobar",
-                 password_confirmation: "foobar")
+    admin = User.create!(name: "Tim",
+                 email: "tim@sg1.com",
+                 password: "password",
+                 password_confirmation: "password")
                  admin.toggle!(:admin)
-    99.times do |n|
+    25.times do |n|
       name  = Faker::Name.name
-      email = "example-#{n+1}@railstutorial.org"
+      email = "example-#{n+1}@schoolreport.org"
       password  = "password"
       User.create!(name: name,
                    email: email,
                    password: password,
                    password_confirmation: password)                  
-    end    
-    users = User.all(limit: 6)
-    50.times do
+    end 
+       
+    users = User.all    
+    3.times do
       content = Faker::Lorem.sentence(5)
-      title = Faker::Lorem.words(1)
-      users.each { |user| user.topics.create!(content: content, title: title) }    
-    end
-    topics = Topic.all(limit: 6)
-    50.times do
-      content = Faker::Lorem.sentence(5)
-      topics.each { |topic| topic.replies.create!(content: content) }    
-    end
+      title = Faker::Company.bs 
+           
+      users.each do |user| 
+        topic = user.topics.create!(content: content, title: title)
+                  
+        4.times do
+          r = Random.rand(20) +1
+          content = Faker::Lorem.sentence(5)                 
+          topic.replies.create!(content: content, user_id: r)
+        end   
+      end   
+    end   
   end
 end
 

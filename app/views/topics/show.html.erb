@@ -1,7 +1,15 @@
-<p>Test</p>
 <%= render @topic %>
 <% if @topic.replies.any? %>
   <ol class="topics">
   <%= render @replies %>
   </ol>
 <% end%>
+  
+<% if signed_in? %>
+<div class="row">
+  <div class="span8 reply">    
+    <%= current_user.name %>
+    <%= render 'shared/reply_form'%>
+  </div>
+</div>
+<% end %>

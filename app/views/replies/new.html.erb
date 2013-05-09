@@ -1,8 +1,7 @@
-<div class="row">
-  <span class="span12">
-  <%= render 'shared/user_info'%>
-  </span>
-  <div class="span10">
-    <%= render 'shared/reply_form'%>
+<%= form_for(@reply) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>   
+  <div class="field">
+    <%= f.text_area :content, placeholder: "Create a reply..." %>
   </div>
-</div>
+  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+<% end %>

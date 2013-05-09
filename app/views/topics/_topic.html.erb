@@ -1,6 +1,5 @@
 <li>
-  <%= link_to "View topic", topic %>
-  <div class="title"> <%= topic.title.upcase %></div>
+  <div class="title"> <%= link_to topic.title.upcase, topic %></div>
   <span class="region"><%= topic.region %></span>
   <span class="school_type"><%= topic.school_type %></span>
   <span class="school_name"><%= topic.school_name %></span>
@@ -8,5 +7,5 @@
   <span class="timestamp">
     Posted <%= time_ago_in_words(topic.created_at) %> ago by: &nbsp;
   </span>
-  <span class="users"><%= topic.user.name%></span>
+  <span class="users"><%= link_to topic.user.name, topic.user %></span>
 </li>

@@ -2,8 +2,10 @@ class TopicsController < ApplicationController
   before_filter :signed_in_user, only: [:create, :destroy, :new]
   
   def show
-    @topic = Topic.find(params[:id])
+    @topic = Topic.find(params[:id])    
     @replies = @topic.replies
+    @reply = Reply.new
+    @user = current_user
   end
   
   def create
