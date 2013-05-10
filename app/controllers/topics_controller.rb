@@ -1,13 +1,20 @@
 class TopicsController < ApplicationController
   before_filter :signed_in_user, only: [:create, :destroy, :new]
   
-  def show
-    @topic = Topic.find(params[:id])    
+  # GET /topics/<topic id>
+  #Show individual topics
+  def show 
+    #create topic for display
+    @topic = Topic.find(params[:id]) 
+    #get all replies related to topic   
     @replies = @topic.replies
+    #prepare a new reply
     @reply = Reply.new
+    #Get currently signed in user
     @user = current_user
   end
   
+  # POST /
   def create
     @topic = current_user.topics.build(params[:topic])
     if @topic.save
