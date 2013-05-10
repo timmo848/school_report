@@ -16,6 +16,7 @@ class TopicsController < ApplicationController
   
   # POST /
   def create
+    #Create a topic using POST params
     @topic = current_user.topics.build(params[:topic])
     if @topic.save
       flash[:success] = "Topic created!"
