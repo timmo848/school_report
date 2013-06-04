@@ -1,13 +1,15 @@
 @import "bootstrap";
+@import "bootstrap-responsive";
 
 
 /*********************** navbar-search ************************/
 
-.navbar-search {
-  
+.navbar-search { 
   padding: 50px;
   margin-bottom: 15px;
   margin-top: 15px;
+  text-align:center;
+  float:none;
 }
 .navbar-inner {
   background-image: -moz-linear-gradient(top, #2fb8bf, #003f7f) !important;
@@ -33,7 +35,6 @@
 
 .navbar .nav > li > a {
   padding: 10px 10px 11px !important;
-
   font-size: 14px !important;
   color: #f7fcfa !important;
 }
@@ -68,9 +69,16 @@ $grayMediumLight: #eaeaea;
 html {
   overflow-y: scroll;
 }
+.min{
+  min-width:320px;
+}
+.max{
+  max-width:320px;
+}
 body {
-  padding-top: 60px;
+  padding-top: 0px;
   background: #EBEBF8;
+  min-width:300px;
 }
 section {
   overflow: auto;
@@ -103,7 +111,6 @@ textarea {
   color: #3366CC;
 }
 .gravatar {
-  float: left;
   margin-right: 10px;
 }
 aside {
@@ -150,11 +157,6 @@ aside {
       margin-top: 0px;
     }
   }
-}
-
-.gravatar {
-  float: left;
-  margin-right: 10px;
 }
 
 /*************************** replies****************************/
@@ -207,10 +209,16 @@ h1 {
 h2 {
   font-size: 1.7em;
   letter-spacing: -1px;
-  margin-bottom: 60px;
-  margin-top: 60px;
+  margin-bottom: 20px;
+  margin-top: 10px;
   text-align: center;
   font-weight: normal;
+  color: #3366CC;
+}
+h6 {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  font-weight: bold;
   color: #3366CC;
 }
 
@@ -223,7 +231,7 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
+  font-size: 1.4em;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;

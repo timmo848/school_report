@@ -1,8 +1,10 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= link_to "School report forums", root_path, id: "logo" %>
+<header class="navbar navbar-inverse">
+  <div class="navbar-inner center">
+    <div class="container-fluid">
       <nav>
+        <span class="hidden-phone">
+        <%= link_to "School report forums", root_path, id: "logo" %>
+        </span>
         <ul class="nav pull-right">
           <li><%= link_to "Home",    root_path %></li>
           <li><%= link_to "Help",    help_path %></li>

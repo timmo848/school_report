@@ -1,9 +1,64 @@
 <% provide(:title, 'About Us') %>
-    <h1>About Us</h1>
-    <p>
-      The site has been provided to aide individuals in making informed decisions 
-      with regards to schools and tertiary institutions in the Hamilton and Tauranga areas.
-    </p>
-    <p>
-      <%= video_tag(["/videos/demo.mp4"], :size => "320x240", :controls => true) %>
-    </p>   
+    <h1 class="hidden-phone">About Us</h1>
+    <h2 class="visible-phone center">About Us</h2>
+    
+    <div class="row-fluid">
+      <div class="span3"></div>
+        <div class="span6">
+          
+          <p class="center">
+            The site has been provided to aide individuals in making informed decisions 
+            with regards to schools and tertiary institutions.<br />
+          </p>
+          <h4 class="center">Demo video</h4>
+          
+          <p class="center">
+            <%= video_tag(["/videos/demo.mp4"], :size => "320x240", :controls => true) %> 
+          </p>
+          
+     
+          <h5>School report forums</h5>
+          
+          <h6>Team name:  SG1</h6>
+          
+          <h6>Team members: Tim Chant & Warwick Barnett</h6>
+          
+          <h6>Location: Tauranga</h6><br />
+          
+          <h6>Problem:</h6> 
+            There aren't any web forums for discussing and reading information on New Zealand based education providers.
+          
+          <h6>Solution - Web app:</h6> 
+            An interactive forum for where users can search through, view and post information
+            and opinions on primary, secondary and tertiary education providers.<br />
+          
+          <h6>Target audience:</h6> 
+            Potiential, current and ex-students. Teachers, faculty and parents.<br />
+          
+          <h6>Scale:</h6> 
+            Many. Initially 1000+, possibly many more<br />
+          
+          <h6>Scope:</h6> International<br />
+          
+          <h6>Key features:</h6> 
+            <ul>
+              <li>Secure user membership.</li>
+              <li>Secure login and logout features for members.</li>
+              <li>Easy topics search on the home page.</li>
+              <li>Personal Gravatar linked to users accounts.</li>
+              <li>Members can post new topics and reply to existing ones.</li>
+              <li>Users can view a list topics posted by any member.</li>
+              <li>Members can view and update their personal information.</li>
+            </ul>
+          
+          <h6>Point of difference:</h6>         
+            This application provides reviews of education providers to users much more efficiently. <br />
+            This is achieved by providing all of the information in one place. 
+            A user can search and display potentially thousands of reviews without leaving the home page!
+            The search results are paginated for quick loading and easy navigation. This provides
+            a efficient and easy to use service where there are currently NO OTHER SERVICES THAT DO THIS. 
+            There are many sites out there that provide information on schools but they are usually RUN BY THE SCHOOLS.
+            We provide an OBJECTIVE AND INDEPENDANT service to provide a wealth of information quickly and easily.
+      </div>
+      <div class="span3"></div>
+    </div> 
