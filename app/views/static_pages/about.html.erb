@@ -15,7 +15,17 @@
           <p class="center">
             <%= video_tag(["/videos/demo.mp4"], :size => "320x240", :controls => true) %> 
           </p>
-          
+          <h4 class="center">Demo video</h4>
+        <p class="center">
+          <div class="RDVideoHelper" style="position: absolute; z-index: -100;">
+            <object class="RDVideoObject" width="320" height="240" type="application/x-rn-downloaderhtml5videoshim-plugin" 
+            data-offsetleft="248" data-offsettop="282" src="http://localhost:3000/videos/demo.mp4">
+            </object>
+          </div>
+          <video width="320" height="240" controls="controls">
+            <source src="/videos/demo.mp4"></source>
+          </video>
+        </p>
      
           <h5>School report forums</h5>
           
@@ -36,9 +46,9 @@
             Potiential, current and ex-students. Teachers, faculty and parents.<br />
           
           <h6>Scale:</h6> 
-            Many. Initially 1000+, possibly many more<br />
+            Initially 1000+ with the ability to scale to millions.<br />
           
-          <h6>Scope:</h6> International<br />
+          <h6>Scope:</h6>New Zealand initially with the ability to scale to International.<br />
           
           <h6>Key features:</h6> 
             <ul>

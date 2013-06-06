@@ -5,9 +5,9 @@
 /*********************** navbar-search ************************/
 
 .navbar-search { 
-  padding: 50px;
-  margin-bottom: 15px;
-  margin-top: 15px;
+  padding: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
   text-align:center;
   float:none;
 }
@@ -22,13 +22,13 @@
 }
 
 .navbar .brand {
-  padding: 8px 20px 12px !important;
+  padding: 8px 10px 12px !important;
   font-size: 20px !important;
   color: #eff1f7 !important;
 }
 
 .navbar .divider-vertical {
-  height: 41px !important;
+  height: 31px !important;
   background-color: #ffffff !important;
   border-right: 1px solid #c6c6c6 !important;
 }
@@ -195,6 +195,10 @@ input {
 /************************** typography **************************/
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  color: #3366CC;
+}
+h2, h3, #logo{
+  text-shadow: 0px -1px 0px #000;
 }
 
 h1 {
@@ -204,12 +208,13 @@ h1 {
   margin-bottom: 30px;
   text-align: center;
   color: #0066FF;
+  text-shadow: 2px 2px 3px #000;
 }
 
 h2 {
   font-size: 1.7em;
   letter-spacing: -1px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-top: 10px;
   text-align: center;
   font-weight: normal;
@@ -248,7 +253,7 @@ p {
 
 /************************* footer **************************/
 footer {
-  margin-top: 45px;
+  margin: 10px 20px 10px 20px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
   color: $grayLight;

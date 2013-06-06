@@ -1,10 +1,10 @@
-<div class="row-fluid">  
-  <span class="min">
+<div class="row center">  
+  <div class="min">
   <%= form_tag({}, :method => "get", :class => "navbar-search") do %>
-    <%= text_field_tag :search_text, nil, :placeholder => 'Search',  :class => "search-query max " %>
+    <%= text_field_tag :search_text, nil, :placeholder => 'Search',  :class => "search-query max" %>
     <%= submit_tag "Search", :class => "btn btn-medium btn-primary" %>
   <% end %> 
-  </span>
+  </div>
 </div>
 <div class="row">
   <div class="span3">

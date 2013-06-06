@@ -1,12 +1,14 @@
 <a class="hidden-phone" href="<%= user_path(current_user) %>">
-  <div>
+  <span>
   <%= gravatar_for current_user, size: 58 %>  
   <%= current_user.name %>
   <%= pluralize(current_user.topics.count, "topics")%>
-  </div>
+  </span>
 </a>
 <a class="visible-phone" href="<%= user_path(current_user) %>">
+  <span>
   <%= gravatar_for current_user, size: 28 %>
   <%= current_user.name %>
   <%= pluralize(current_user.topics.count, "topics")%>
+  </span>
 </a>

@@ -2,38 +2,32 @@
 <div class="row fluid">
   <aside class="span4">
   	<section>
-  	  <h1>
+  	  <h4>
      		<%= gravatar_for @user %>
     		<%= @user.name %>
-  	  </h1>
+  	  </h4>
   	  
       <button class="btn btn-large btn-primary" onclick="getLocation()">Show my location</button>
       <div id="mapholder"></div>
       
-      <script>
-      var x=document.getElementById("demo");
-      function getLocation()
-        {
-        if (navigator.geolocation)
-          {
+      <script> //Start of the Geolocation code
+      var x=document.getElementById("mapholder");
+      function getLocation(){
+        if (navigator.geolocation){//Test to see if browser supports geolocation
+          
+          //Get the current latitude and longitude coordinates of the machine that is runnung the browser.
+          //If successful, run the 'showPosition' function else run the 'showError' function
           navigator.geolocation.getCurrentPosition(showPosition,showError);
-          }
-        else{x.innerHTML="Geolocation is not supported by this browser.";}
-        }
-      
-      function showPosition(position)
-        {
-        var latlon=position.coords.latitude+","+position.coords.longitude;
-      
-        var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
-        +latlon+"&zoom=14&size=400x300&sensor=true";
-        document.getElementById("mapholder").innerHTML="<img src='"+img_url+"'>";
-        }
-      
-      function showError(error)
-        {
-        switch(error.code) 
-          {
+          }else{x.innerHTML="Geolocation is not supported by this browser.";}//Display 'Browser not supported' message
+        }      
+      function showPosition(position){//Function to display a google map of the location
+        var latlon=position.coords.latitude+","+position.coords.longitude; //Append coords for use with Google Static Maps    
+        var img_url="http://maps.googleapis.com/maps/api/staticmap?center="//Create google 'Static Maps API' URI
+        +latlon+"&markers=color:red%7Clabel:X%7C"+latlon+"&zoom=14&size=400x300&sensor=false";
+        document.getElementById("mapholder").innerHTML="<img src='"+img_url+"'>";//Display google map of location
+        }     
+      function showError(error){//Function to display error information
+        switch(error.code){
           case error.PERMISSION_DENIED:
             x.innerHTML="User denied the request for Geolocation."
             break;

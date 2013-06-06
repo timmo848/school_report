@@ -1,5 +1,0 @@
-To access the site on your Pc open up your ruby on rails terminal type in rails server and run that command it will open up your site under https:// localhost:3000. 
-Then go to the browser type in the address and the application will be opened and running.
-To access the site in heroku just go to this URL address:  https://sleepy-everglades-4674.herokuapp.com/ and the site will be open and running.
-To access the API documentation go to the following directory in the school_report/doc/app and inside the directory is where the API documentation is kept.
-

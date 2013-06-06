@@ -4,27 +4,37 @@
   		on Education providers    	
     </h2> 
 </div>
+
 <div class="row center visible-phone">
-    <h2>    
+    <h5>    
       School report forums      
-    </h2> 
+    </h5> 
 </div>
-<div class="row-fluid">   
-  <% if signed_in? %>
-   <div class="span3 center">
-     <%= render 'shared/user_info'%><br />
-     <%= link_to "Start a new topic!", new_topic_path, class: "btn btn-large btn-primary" %>
-   </div>
-   <div class="span10">
-     <%= render 'shared/topic_search'%>   
-   </div>
+
+<% if signed_in? %>
+<div class="row-fluid">
+ <span>     
+  <%= render 'shared/user_info'%>
+ </span>
+ 
+ <span class="span3 pull-right"> 
+  <%= link_to "Start a new topic!", new_topic_path, class: "btn btn-large btn-primary" %>
+ </span>
+</div>
+<div class="row-fluid">
+  <div class="span12">
+   <%= render 'shared/topic_search'%>   
+  </div>
+</div>
   
-  <% else %>
-    <div class="span12 center">
-      <%= link_to "Sign up now!", registration_path, class: "btn btn-large btn-primary" %>
-    </div>
-    <div class="span12">
+<% else %>
+<div class="row-fluid">  
+  <div class="span12 center">
+    <%= link_to "Sign up now!", registration_path, class: "btn btn-large btn-primary" %>
+  </div>
+
+  <div class="span12 center">
      <%= render 'shared/topic_search'%>   
-    </div>
-  <% end %> 
+  </div>
 </div>
+<% end %> 
