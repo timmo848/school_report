@@ -1,5 +1,13 @@
 == Welcome to School Report Forums README ==
 
+>>Compatibility<
+
+This web application is fully compatible with the latest versions of:
+-Microsoft Internet Explorer
+-Mozilla Firefox
+-Google Chrome
+
+
 >>To access this Web App on a local machine<<
 
 Note: This requires RAILS 3.2 or later and RUBY 1.8 or later 
@@ -17,7 +25,6 @@ Note: This requires RAILS 3.2 or later and RUBY 1.8 or later
 >>To access this Web App on the Heroku cloud service<<
 
 1. Using a web browser, navigate to this URL:  https://sleepy-everglades-4674.herokuapp.com/ 
-
 
 >>To access the API documentation<< 
 1. Navigate to the following directory in the school_report/doc/app 
